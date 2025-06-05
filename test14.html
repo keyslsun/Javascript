@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>悬停</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        border: solid 2px red;
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+
+    <script>
+      const div = document.querySelector("div");
+
+      div.addEventListener("mouseenter", function () {
+        div.style.background = "blue";
+        alert("你轻轻的来了");
+      });
+
+      div.addEventListener("mouseleave", function () {
+        div.style.background = "black";
+        alert("你狠心的离开了");
+      });
+    </script>
+  </body>
+</html>

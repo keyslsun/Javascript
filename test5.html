@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>问候</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://img.keaitupian.cn/newupload/05/1685179530622267.jpg"
+      alt=""
+    />
+    <div>上午好</div>
+    <button id="btn">按钮</button>
+    <input type="text" name="" value="请输入内容" />
+
+    <script>
+      let img = document.querySelector("img");
+      let div = document.querySelector("div");
+      let btn = document.querySelector("button");
+      let txt = document.querySelector("input");
+
+      btn.onclick = function () {
+        txt.value = "被点击了";
+        this.disabled = true;
+      };
+
+      let date = new Date();
+      let h = date.getHours();
+
+      if (h < 12) {
+        img.src = "https://img.keaitupian.cn/newupload/05/1685179530622267.jpg";
+        div.innerHTML = "上午好，老实写代码";
+      } else if (h >= 12 && h < 18) {
+        img.src =
+          "https://tse1-mm.cn.bing.net/th/id/OIP-C.TfADIfeQV6twHLTEcPXwvAHaFj?rs=1&pid=ImgDetMain";
+        div.innerHTML = "下午好,继续写代码";
+      } else {
+        img.src =
+          "https://ts1.tc.mm.bing.net/th/id/R-C.61726505713756b23147162999b94640?rik=ul%2bATJxHuMPo3g&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fq_70%2cc_zoom%2cw_640%2fimages%2f20180729%2f4afe4a3df1cb49e8b5dd67e1f5b23307.gif&ehk=FRNn7ZrjY851C8KCzZ26CWv3bWJ9pNnRuJFJ2lt%2fAgw%3d&risl=&pid=ImgRaw&r=0";
+        div.innerHTML = "别睡了，接着写！";
+      }
+    </script>
+  </body>
+</html>

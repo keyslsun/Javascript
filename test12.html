@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .box {
+        width: 500px;
+        height: 300px;
+        border: solid 2px black;
+        display: flex;
+        position: relative;
+        left: 25%;
+      }
+
+      .box .top {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        position: absolute;
+      /*  border: solid 2px red;*/
+        top: 0;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .box .top p {
+        font-size: 50px;
+      }
+
+      .box .mid {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        position: absolute;
+    /*    border: solid 2px blue; */
+        top: 30%;
+        align-items: center;
+      }
+
+      .box .mid p {
+        font-size: 30px;
+      }
+
+      .box .bot {
+        width: 100%;
+        height: 20%;
+        display: flex;
+/*        border: solid 2px green;*/
+        position: relative;
+        top: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .box .bot button {
+        height: 30px;
+        width: 10%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="top"><p>随机点名</p></div>
+
+      <div class="mid">
+        <p>
+          学生姓名:
+          <h2>sjk</h2>
+        </p>
+      </div>
+      <div class="bot">
+        <button class="start">开始</button>
+        <button class="end">结束</button>
+      </div>
+    </div>
+    <script>
+      const start = document.querySelector('.start');
+      const end = document.querySelector('.end');
+      const h2 = document.querySelector('h2');
+
+      let arr = ['sjk','wyzx','ljw','yjh','zys','dh','xyh'];
+      let time = 0;
+      let random = 0;
+      
+      start.addEventListener('click', function() {
+      time = setInterval(function(){
+        random = Math.floor(Math.random() * arr.length);
+        h2.innerHTML = arr[random];
+        }, 50)
+      start.disabled = true;
+      });
+
+      end.addEventListener('click', function(){
+        clearInterval(time);
+        start.disabled = false;
+        arr.splice(random, 1);
+        if(arr.length == 0){
+          start.disabled = true;
+          end.disabled = true;
+          alert('学生名册已点完');
+        }
+      })
+    </script>
+  </body>
+</html>

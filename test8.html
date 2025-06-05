@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>lunbo</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .slider {
+        width: 800px;
+        height: 500px;
+        overflow: hidden;
+      }
+
+      .slider-wrapper {
+        width: 100%;
+        height: 320px;
+      }
+
+      .slider-wrapper img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .slider-footer {
+        height: 80px;
+        background-color: rgb(100, 67, 68);
+        padding: 12px 12px 0 12px;
+        position: relative;
+      }
+      .slider-footer .toggle {
+        position: absolute;
+        right: 0;
+        top: 12px;
+        display: flex;
+      }
+
+      .slider-footer .toggle button {
+        margin-right: 12px;
+        width: 28px;
+        height: 28px;
+        appearance: none;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .slider-footer .toggle button:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .slider-footer p {
+        margin: 0;
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .slider-indicator {
+        margin: 0px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .slider-indicator li {
+        width: 8px;
+        height: 8px;
+        margin: 4px;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 0.4;
+        cursor: pointer;
+      }
+
+      .slider-indicator li.active {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slider-wrapper">
+        <img
+          src="https://bpic.588ku.com/back_pic/06/11/93/036226bf26d5d85.jpg"
+          alt=""
+        />
+      </div>
+      <div class="slider-footer">
+        <p>春天美好</p>
+        <ul class="slider-indicator">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="toggle">
+          <button class="prev">&lt;</button>
+          <button class="next">&gt;</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const sliderData = [
+        {
+          url: "https://bpic.588ku.com/back_pic/06/11/93/036226bf26d5d85.jpg",
+          title: "春暖花开",
+          color: "pink",
+        },
+        {
+          url: "https://img-baofun.zhhainiao.com/fs/3fc54f2b553dc552c23fd2df0ee0159e.jpg",
+          title: "风萧萧兮易水寒",
+          color: "grey",
+        },
+        {
+          url: "https://ts1.tc.mm.bing.net/th/id/R-C.2a49d9f3677d83a9a2d8849f1442bb22?rik=DpSAj9AUyR4RrA&riu=http%3a%2f%2ffile.51pptmoban.com%2fd%2ffile%2f2023%2f06%2f04%2fb3925630992729172938c08655e5cfd0.jpg&ehk=avAdUGiVQ52VCb2qjEv6sors6E%2bzLS0DO4tv4hnl6aw%3d&risl=&pid=ImgRaw&r=0",
+          title: "上善若水",
+          color: "blue",
+        },
+        {
+          url: "https://file.51pptmoban.com/d/file/2022/08/22/bc0bb0eeaa189dd1380109000f8a5ed0.jpg",
+          title: "春风吹我梦",
+          color: "green",
+        },
+        {
+          url: "https://img.tukuppt.com/ad_preview/00/05/88/5c98e29654761.jpg!/fw/780",
+          title: "天高海阔",
+          color: "#098",
+        },
+        {
+          url: "https://tse2-mm.cn.bing.net/th/id/OIP-C.2rQ25qnSMQHXGcHz3Rp2pAHaEo?rs=1&pid=ImgDetMain",
+          title: "淡泊以明性",
+          color: "#013456",
+        },
+        {
+          url: "https://c-ssl.duitang.com/uploads/blog/202008/18/20200818190714_kvjqq.jpg",
+          title: "明天见",
+          color: "#555555",
+        },
+      ];
+
+      /* function random(num1, num2) {
+          return Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
+        } */
+
+      // const random = parseInt(Math.random() * sliderData.length);
+      const img = document.querySelector(".slider-wrapper img");
+
+      //img.src = sliderData[random].url;
+      //console.log(random);
+
+      const p = document.querySelector(".slider-footer p");
+      //p.innerHTML = sliderData[random].title;
+
+      const footer = document.querySelector(".slider-footer");
+      //footer.style.backgroundColor = sliderData[random].color;
+
+      //const li = document.querySelector(
+      //  `.slider-indicator li:nth-child(${random + 1})`,
+      // );
+
+      // li.classList.toggle("active");
+
+      let i = 0;
+      const next = document.querySelector(".next");
+      const prev = document.querySelector(".prev");
+
+      function prevs() {
+        i--;
+        img.src = sliderData[i].url;
+        p.innerHTML = sliderData[i].title;
+        footer.style.backgroundColor = sliderData[i].color;
+        document
+          .querySelector(".slider-indicator .active")
+          .classList.remove("active");
+        document
+          .querySelector(`.slider-indicator li:nth-child(${i + 1})`)
+          .classList.add("active");
+      }
+
+      next.addEventListener("click", function () {
+        i++;
+        if (i >= sliderData.length) {
+          i = 0;
+        }
+        img.src = sliderData[i].url;
+        p.innerHTML = sliderData[i].title;
+        footer.style.backgroundColor = sliderData[i].color;
+        document
+          .querySelector(".slider-indicator .active")
+          .classList.remove("active");
+        document
+          .querySelector(`.slider-indicator li:nth-child(${i + 1})`)
+          .classList.add("active");
+      });
+
+      prev.addEventListener("click", function () {
+        i--;
+        if (i < 0) {
+          i = 6;
+        }
+        img.src = sliderData[i].url;
+        p.innerHTML = sliderData[i].title;
+        footer.style.backgroundColor = sliderData[i].color;
+        document
+          .querySelector(".slider-indicator .active")
+          .classList.remove("active");
+        document
+          .querySelector(`.slider-indicator li:nth-child(${i + 1})`)
+          .classList.add("active");
+      });
+
+      let timer = setInterval(function () {
+        i++;
+        console.log(i);
+        if (i >= sliderData.length) {
+          i = 0;
+        }
+        img.src = sliderData[i].url;
+        p.innerHTML = sliderData[i].title;
+        footer.style.backgroundColor = sliderData[i].color;
+        document
+          .querySelector(".slider-indicator .active")
+          .classList.remove("active");
+        document
+          .querySelector(`.slider-indicator li:nth-child(${i + 1})`)
+          .classList.add("active");
+        return i;
+      }, 5000);
+
+      const slider = document.querySelector(".slider");
+
+      slider.addEventListener("mouseenter", function () {
+        clearInterval(timer);
+        console.log("暂停了");
+      });
+
+      slider.addEventListener("mouseleave", function () {
+        clearInterval(timer);
+
+        timer = setInterval(function () {
+          i++;
+          console.log(i);
+          if (i >= sliderData.length) {
+            i = 0;
+          }
+          img.src = sliderData[i].url;
+          p.innerHTML = sliderData[i].title;
+          footer.style.backgroundColor = sliderData[i].color;
+          document
+            .querySelector(".slider-indicator .active")
+            .classList.remove("active");
+          document
+            .querySelector(`.slider-indicator li:nth-child(${i + 1})`)
+            .classList.add("active");
+          return i;
+        }, 5000);
+
+        console.log("继续轮播");
+      });
+    </script>
+  </body>
+</html>

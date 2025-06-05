@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>按钮</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <button id="btn">唐伯虎</button>
+    <div>我红了</div>
+
+    <script>
+      let btn = document.querySelector("button");
+
+      btn.onclick = function () {
+        alert("点秋香");
+      };
+
+      let div = document.querySelector("div");
+
+      div.onclick = function () {
+        console.log("我被点击了");
+      };
+    </script>
+  </body>
+</html>

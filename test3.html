@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>改变元素内容</title>
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background-color: pink;
+      }
+
+      div {
+        background-color: white;
+      }
+
+      h1 {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">显示当前时间</button>
+    <div>某个时间</div>
+    <h1>123</h1>
+
+    <script>
+      let btn = document.querySelector("button");
+      let div = document.querySelector("div");
+
+      btn.onclick = function () {
+        div.innerText = getDate();
+      };
+
+      function getDate() {
+        let date = new Date();
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+        let dates = date.getDate();
+
+        let week = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+        let day = date.getDay();
+        return "今天是" + year + "年" + month + "月" + dates + "日" + week[day];
+      }
+
+      let time = document.querySelector("h1");
+      time.innerText = getDate();
+    </script>
+  </body>
+</html>

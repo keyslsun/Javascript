@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>test</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+      /*let a = prompt("First number?", 1);
+       let b = prompt("Second number?", 2);
+
+       alert(+a + +b); */
+      /*var age = prompt("age?", 3);
+       if (age < 3) {
+         message = "Hi, baby!";
+       } else if (age < 18) {
+         message = "Hello!";
+       } else if (age < 100) {
+         message = "Greetings!";
+       } else {
+         message = "What an unusual age!";
+       }
+       alert(message);*/
+
+      /* let value = prompt(`What’s the “official” name of JavaScript?`, "");
+       if (value == `ECMAScript`) {
+         alert("Right!");
+       } else {
+         alert("You don’t know? ECMAScript!");
+       } */
+
+      /* let num = prompt("what is the 'number' ?", "");
+       if (num > 0) {
+         alert(0);
+       } else if (num < 0) {
+         alert(-1);
+       } else {
+         alert(1);
+       } */
+
+      /*let message =
+         login == "Employee"
+           ? "Hello"
+           : login == "Director"
+             ? "Greetings"
+             : login == ""
+               ? "No login"
+               : ""; */
+
+      /*alert((true || true) && !(false && true)); // true
+       alert(false && true); // true
+       alert(true && false); // true
+       alert(false && false);*/
+
+      //alert(null || (3 && 2) || 4);
+
+      /* var age = prompt("how old are you ?", "");
+       if (age < 14 || age > 90) {
+         alert("yes,safe");
+       } */
+
+      /* let Username = prompt("who are you ?提示:'Admin'", "");
+       if (Username == "Admin") {
+         let password = prompt("input your password 提示:'Master'", "");
+
+         if (password === "Master") {
+           alert("Welcome");
+         } else if (password === "" || password === null) {
+           alert("canceled");
+         } else {
+           alert("wrong!");
+         }
+       } else if (Username === "" || Username === null) {
+         alert("canceled");
+       } else {
+         alert("I don't know you!");
+       } */
+
+      /* for (i = 2; i <= 10; i++) {
+         if (i % 2 == 0) {
+           alert(i);
+         }
+       } */
+
+      /* let i = 0;
+       while (true) {
+         if (i < 3) {
+           alert(i);
+           i++;
+         }
+       } */
+
+      /* let num;
+       do {
+         num = prompt("请输入大于100的数字", 0);
+       } while (num < 100 && num); */
+
+      /* let n = 20;
+       main: for (i = 2; i <= n; i++) {
+         for (j = 2; j < i; j++) {
+           if (i % j == 0) continue main;
+         }
+         alert(i);
+       } */
+
+      /*  function pow(x, n) {
+         let result = x;
+         for (i = 1; i < n; i++) {
+           result *= x;
+         }
+         return result;
+       }
+
+       let x = prompt("输入x", "");
+       let n = prompt("输入y", "");
+
+       if (n < 1) {
+         alert("error");
+       } else {
+         alert(pow(x, n));
+       } */
+
+      /* function ask(question, yes, no) {
+         if (confirm(question)) {
+           yes();
+         } else {
+           no();
+         }
+       }
+       function showyes() {
+         alert("you agree!");
+       }
+
+       function showno() {
+         alert("you don't agree!");
+       }
+
+       ask("do you agree?", showyes, showno); */
+
+      /* let user = {
+         name: "John",
+         surname: "Smith",
+       };
+       alert(user.name);
+       user.name = "Pete";
+       alert(user.name);
+       delete user.name;
+       alert(user.name);
+       alert("name" in user); */
+
+      /* function isEmpty(obj) {
+         for (let key in obj) {
+           return false;
+         }
+         return true;
+       }
+
+       let obj = {
+         name: name,
+       };
+       alert(isEmpty(obj)); */
+
+      /* let salaries = {
+         John: 100,
+         Ann: 160,
+         Pete: 130,
+       };
+
+       let sum = 0;
+       for (let key in salaries) {
+         sum += salaries[key];
+         console.log(sum);
+       } */
+
+      /* let menu = {
+         width: 200,
+         height: 300,
+         title: "My menu",
+       };
+
+       let mul = 0;
+       function muliple(menu) {
+         for (let key in menu) {
+           if (typeof menu[key] === "number") {
+             menu[key] *= 2;
+           }
+         }
+       }
+
+       muliple(menu);
+       alert(menu["height"]);
+
+       let content = "text";
+       Object.assign(menu, { content: "text" });
+       alert(menu.content);
+
+       let clone = Object.assign({}, menu);
+       alert(clone.width); */
+
+      /* let calc = {
+         sum() {
+           return this.a + this.b;
+         },
+
+         mul() {
+           return this.a * this.b;
+         },
+
+         read() {
+           this.a = +prompt("a?", 0);
+           this.b = +prompt("b?", 0);
+         },
+       };
+
+       calc.read();
+       alert(calc.sum());
+       alert(calc.mul()); */
+
+      /* let age = prompt("how old are you?");
+       console.log(parseFloat(age)); */
+
+      /* let born = prompt("你的出生年份", 0),
+         today = 2025,
+         result = today - born;
+       alert("你今年" + result + "岁了"); */
+
+      /* let num1 = prompt("输入第一个数值"),
+         num2 = prompt("输入第二个值"),
+         sum = parseFloat(num1) + parseFloat(num2);
+       alert(sum); */
+
+      /* let name = prompt("请输入你的姓名", ""),
+         age = prompt("请输入你的年龄"),
+         sex = prompt("请输入你的性别");
+
+       alert("你的姓名:" + name + "\n你的年龄:" + age + "\n你的性别:" + sex); */
+
+      /* var temp;
+       var left = "apple";
+       var right = "banana";
+
+       temp = left;
+       left = right;
+       right = temp;
+
+       console.log(left);
+       console.log(right); */
+
+      /* var year = parseFloat(prompt("请输入年份", 0));
+       if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+         alert("是闰年");
+       } else {
+         alert("是平年");
+       }
+
+       /* var name = prompt("请输入你的姓名");
+
+       if (name == "刘德华") {
+         alert("恭喜你中奖了5元");
+       } else {
+         alert("你没有中奖");
+       } */
+
+      /* var num = parseFloat(prompt("请输入你的考试成绩"));
+
+       if (num >= 70 && num <= 100) {
+         if (num >= 70 && num < 80) {
+           alert("C!");
+         } else if (num >= 80 && num < 90) {
+           alert("B!");
+         } else {
+           alert("A！");
+         }
+       } else if (num < 70 && num >= 60) {
+         alert("D!");
+       } else {
+         alert("E！");
+       } */
+
+      /* var sum = 0;
+       var average = 0;
+       for (i = 1; i <= 100; i++) {
+         sum += i;
+       }
+       console.log(sum);
+       average = sum / 100;
+       console.log(average);
+
+       var even = 0;
+       var odd = 0;
+
+       for (i = 1; i <= 100; i++) {
+         if (i % 2 == 0) {
+           even += i;
+         }
+       }
+       console.log(even);
+
+       for (j = 1; j <= 100; j++) {
+         if (j % 2 != 0) {
+           odd += j;
+         }
+       }
+       console.log(odd);
+       var sum2 = even + odd;
+       console.log(sum2);
+
+       var oddd = 0;
+       for (i = 1; i <= 100; i++) {
+         if (i % 3 == 0) {
+           oddd += i;
+         }
+       }
+       console.log(oddd); */
+      /* var sum = 0;
+       var average = 0;
+       var classmembers = prompt("请输入你班级的人数");
+       for (i = 1; i <= classmembers; i++) {
+         var score = prompt("请输入第" + i + "个人的成绩");
+         sum += parseFloat(score);
+       }
+       average = sum / classmembers;
+       alert("总成绩是:" + sum);
+       alert("班级平均成绩是:" + average); */
+
+      /* var arr = ["星期一", "星期二", "周三", "周四", "周五", "周六", "周日"];
+       console.log(arr.length);
+       console.log(arr[6]);
+
+       for (i = 0; i <= 6; i++) {
+         console.log(arr[i]);
+       } */
+
+      //var arr = [2, 6, 1, 7, 4, 99, 90];
+      //var sum = 0;
+      //var average = 0;
+
+      /* for (i = 0; i < arr.length; i++) {
+         sum += arr[i];
+       }
+       average = sum / arr.length;
+       console.log(sum);
+       console.log(average); */
+
+      //var max = arr[0];
+      //var min = arr[0];
+
+      /* for(i = 0; i < arr.length; i++) {
+         if (arr[i] >= max) {
+           max = arr[i];
+         }
+       }
+       console.log(max); */
+
+      /* for (i = 0; i < arr.length; i++) {
+         if (arr[i] < min) {
+           min = arr[i];
+         }
+       }
+       console.log(min); */
+
+      /* var arr = [];
+       for (i = 0; i < 100; i++) {
+         arr[i] = i + 1;
+       }
+       console.log(arr); */
+
+      /* var arr1 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+       var arr2 = [];
+       //var j = 0;
+
+       /* for (i = 0; i < arr1.length; i++) {
+         if (arr1[i] > 10) {
+           //arr2.push(arr1[i]);
+           //arr2[j] = arr1[i];
+           //j++;
+           arr2[arr2.length] = arr1[i];
+         }
+       }
+       console.log(arr2); */
+
+      /* for (i = 0; i < arr1.length; i++) {
+         if (arr1[i] <= 10) {
+           arr2[arr2.length] = arr1[i];
+         }
+       }
+       console.log(arr2); */
+
+      /* for (i = 0; i < arr1.length; i++) {
+         if (arr1[i] != 0) {
+           arr2[arr2.length] = arr1[i];
+         }
+       }
+       console.log(arr2);  */
+
+      // console.log(arr1.reverse());
+
+      /* for (i = arr1.length - 1; i >= 0; i--) {
+         arr2[arr2.length] = arr1[i];
+       }
+       console.log(arr2); */
+
+      /* var a = "apple";
+       var b = "banana";
+       var temp = "";
+       temp = a;
+       a = b;
+       b = temp;
+
+       console.log(a, b); */
+
+      /* var arr = [5, 4, 3, 2, 1, 6, 7, 8, 9];
+
+       for (i = 0; i < arr.length; i++) {
+         for (j = 0; j < arr.length - i; j++) {
+           if (arr[j] > arr[j + 1]) {
+             var temp;
+             temp = arr[j];
+             arr[j] = arr[j + 1];
+             arr[j + 1] = temp;
+           }
+         }
+       }
+       console.log(arr); */
+
+      /* var sum = "";
+       for (i = 1; i <= 9; i++) {
+         for (j = 1; j <= i; j++) {
+           sum += i + "*" + j + "=" + i * j + "  ";
+         }
+         sum += "\n <br>";
+       }
+       console.log(sum);
+       document.write(sum); */
+
+      /* function getsum(num1, num2) {
+         var sum = 0;
+
+         for (i = num1; i <= num2; i++) {
+           sum += i;
+         }
+         console.log(sum);
+       }
+
+       getsum(1, 100);
+       getsum(1, 50);
+       getsum(1, 1000);  */
+
+      /* function cock(aaa) {
+         console.log(aaa);
+       }
+
+       cock("炒饭");
+       cock("炒肉");
+       cock("佛跳墙"); */
+
+      /* function sum(num1, num2) {
+         sum = num1 + num2;
+         console.log(sum);
+       }
+
+       sum(1, 3); */
+
+      /* function bijiao(num1, num2) {
+         return num1 > num2 ? num1 : num2;
+       }
+
+       console.log(bijiao(1, 3)); */
+
+      /* var arr = [5, 2, 99, 101, 67, 77];
+       var newArr = [100, 102, 111111, 12233, 555555555, 0];
+
+       function max(arr) {
+         var max = arr[0];
+         for (i = 0; i < arr.length; i++) {
+           if (max < arr[i]) {
+             max = arr[i];
+           }
+         }
+         return max;
+       }
+
+       console.log(max(arr));
+       console.log(max(newArr));
+       var maxNumber = max(newArr);
+       console.log(maxNumber); */
+
+      /* function calc(num1, num2) {
+         return [
+           num1 + num2,
+           num1 - num2,
+           num1 / num2,
+           num1 * num2,
+           num1 % num2,
+         ];
+       }
+       console.log(calc(4, 8));
+
+       function bijiao1(num1, num2) {
+         if (num1 > num2) {
+           return num1;
+         } else {
+           return num2;
+         }
+       }
+
+       console.log(bijiao1(8, 9));
+
+       function bijiao2(num1, num2, num3) {
+         console.log(arguments);
+         if (num1 > num2 && num1 > num3) {
+           return num1;
+         } else if (num2 > num1 && num2 > num3) {
+           return num2;
+         } else {
+           return num3;
+         }
+       }
+       console.log(bijiao2(100, 200, 99));
+
+       function sushu(num) {
+         if (num == 2) {
+           return num + "是素数";
+         } else if (num <= 1) {
+           return num + "不是素数";
+         }
+         for (i = 2; i < num; i++) {
+           if (num % i === 0) {
+             return num + "不是素数";
+           } else {
+             return num + "是素数";
+           }
+         }
+       }
+       console.log(sushu(2)); */
+
+      /* function getMax() {
+         var max = arguments[0];
+         for (i = 0; i < arguments.length; i++) {
+           if (max < arguments[i]) {
+             max = arguments[i];
+           }
+         }
+         return max + "是最大值";
+       }
+
+       console.log(getMax(1, 2, 3, 4, 5, 99, 23));
+       console.log(getMax(1, 222, 300, 47, 5, 99, 23)); */
+
+      /* function runYear(year) {
+         var flag = false;
+         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+           flag = true;
+         }
+         return flag;
+       }
+
+       function checkmoon() {
+         var year = prompt("请您输入要确认的年份:");
+
+         if (runYear(year)) {
+           alert(year + "年是闰年");
+           alert(year + "年的2月份是29天");
+         } else {
+           alert(year + "年是平年");
+           alert("该年的2月份是28天");
+         }
+       }
+       checkmoon(); */
+
+      /* var sum = 0;
+       for (i = 1; ; i++) {
+         var term = i * (i + 1);
+         if (term > 200) {
+           break;
+         }
+         sum += term;
+       }
+
+       alert(sum); */
+
+      /* var obj = {};
+       obj = {
+         name: "可可",
+         type: "阿拉斯加犬",
+         age: "5岁",
+         colog: "棕红色",
+         skill: function () {
+           console.log("汪汪汪！");
+           console.log("演戏！");
+         },
+       };
+
+       console.log(obj.name);
+       obj.skill(); */
+
+      /* var obj = new Object();
+       obj.name = "naruto";
+       obj.sex = "boy";
+       obj.age = "19";
+       obj.skill = function () {
+         console.log("影分身");
+       };
+
+       for (var k in obj) {
+         console.log(k);
+         console.log(obj[k]);
+       }
+
+       console.log(obj.name);
+       obj.skill(); */
+
+      /* function Born(name, age, sex) {
+         (this.name = name),
+           (this.age = age),
+           (this.sex = sex),
+           (this.zhaoshu = function (skill) {
+             console.log(skill);
+           });
+       }
+
+       var cxk = new Born("蔡徐坤", "20", "男");
+       console.log(typeof cxk);
+       console.log(cxk.name);
+       cxk.zhaoshu("唱跳rap");
+
+       var libai = new Born("李白", "1000", "男");
+       console.log(typeof libai);
+       console.log(libai.name);
+       libai.zhaoshu("诗兴大发");
+
+       function Boss(type, name, hp) {
+         (this.type = type),
+           (this.name = name),
+           (this.hp = hp),
+           (this.attack = function (leixing) {
+             console.log(leixing);
+           });
+       }
+
+       var lianpo = new Boss("力量型", "廉颇", "500血量");
+       console.log(typeof lianpo);
+       console.log(lianpo.name);
+       console.log(lianpo.type, lianpo.hp);
+       lianpo.attack("攻击:近战");
+
+       var houyi = new Boss("射手型", "后裔", "100血量");
+       console.log(typeof houyi);
+       console.log(houyi.name, houyi.type, houyi.hp);
+       houyi.attack("攻击:远程"); */
+
+      /* var computer = {
+         color: "pink",
+         kg: "2kg",
+         pingpai: "外星人",
+         leixing: "游戏本",
+         whatch: function () {
+           console.log("看电视");
+         },
+         play: function (wan) {
+           console.log("玩游戏");
+         },
+         work: function () {
+           console.log("打代码");
+         },
+         music: function () {
+           console.log("听音乐");
+         },
+       };
+
+       for (var k in computer) {
+         console.log(computer[k]);
+       }
+
+       computer.work();
+       computer.whatch();
+       computer.play();
+       computer.music(); */
+
+      /* function Anniu(width, height, color) {
+         this.width = typeof width === "number" ? width + "px" : width;
+         this.height = typeof height === "number" ? height + "px" : height;
+         this.background = color;
+
+         //点击方法
+         this.onClick = function () {
+           console.log("该按钮被点击了");
+         };
+       }
+
+       var button = new Anniu(20, 20, "pink"); */
+
+      /* var car = {
+         kg: "1000kg",
+         color: "red",
+         pinpai: "奥托",
+         type: "百吨王",
+         lahuo: function () {
+           console.log("拉货");
+         },
+         zairen: function () {
+           console.log("载人");
+         },
+
+         gengtian: function () {
+           console.log("耕田");
+         },
+       };
+
+       for (var k in car) {
+         console.log(car[k]);
+       }
+
+       car.lahuo();
+       car.zairen();
+       car.gengtian(); */
+
+      /* var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+       var arr1 = [];
+       for (i = arr.length - 1; i >= 0; i--) {
+         arr1[arr1.length] = arr[i];
+       }
+       console.log(arr1);
+
+       var arr2 = arr1;
+       for (i = 0; i < arr2.length; i++) {
+         for (j = 0; j < arr2.length - i; j++) {
+           if (arr2[j] > arr2[j + 1]) {
+             var temp;
+             temp = arr2[j];
+             arr2[j] = arr2[j + 1];
+             arr2[j + 1] = temp;
+           }
+         }
+       }
+       console.log(arr2); */
+
+      /* while (true) {
+         var shuru = parseFloat(
+           prompt(
+             "欢迎使用计算器:\n1.加法操作:\n2.减法操作\n3.乘法操作:\n4.除法操作:\n5.退出。",
+           ),
+         );
+         if (shuru == 5) {
+           alert("退出！");
+           break;
+         } else {
+           switch (shuru) {
+             case 1:
+               jia();
+               break;
+             case 2:
+               jian();
+               break;
+             case 3:
+               cheng();
+               break;
+             case 4:
+               chu();
+               break;
+             default:
+               break;
+           }
+         }
+       }
+       function jia() {
+         var num1 = parseFloat(prompt("请输入第一个数:"));
+         var num2 = parseFloat(prompt("请输入第二个数:"));
+         var sum = num1 + num2;
+         var result = num1 + "+" + num2 + "=" + sum;
+         alert(result);
+       }
+       function jian() {
+         var num1 = parseFloat(prompt("请输入第一个数:"));
+         var num2 = parseFloat(prompt("请输入第二个数:"));
+         var sum = num1 - num2;
+         var result = num1 + "-" + num2 + "=" + sum;
+         alert(result);
+       }
+       function cheng() {
+         var num1 = parseFloat(prompt("请输入第一个数:"));
+         var num2 = parseFloat(prompt("请输入第二个数:"));
+         var sum = num1 * num2;
+         var result = num1 + "x" + num2 + "=" + sum;
+         alert(result);
+       }
+       function chu() {
+         var num1 = parseFloat(prompt("请输入第一个数:"));
+         var num2 = parseFloat(prompt("请输入第二个数:"));
+         var sum = num1 / num2;
+         var result = num1 + "÷" + num2 + "=" + sum;
+         alert(result);
+       }
+
+       /* var max = Math.max(1, 3, 9);
+       console.log(max); */
+
+      /* var myMath = {
+         PI: 3.141592653,
+         max: function () {
+           var max = arguments[0];
+           for (i = 0; i < arguments.length; i++) {
+             if (arguments[i] > max) {
+               max = arguments[i];
+             }
+           }
+           return max;
+         },
+         min: function () {
+           var min = arguments[0];
+           for (i = arguments.length - 1; i > 0; i--) {
+             if (arguments[i] < min) {
+               min = arguments[i];
+             }
+           }
+           return min;
+         },
+       };
+
+       console.log(myMath.max(1, 5, 9));
+       console.log(myMath.min(2, 1, 5, 9)); */
+
+      /* console.log(Math.abs(-10));
+       console.log(Math.abs("-10"));
+       console.log(Math.floor(1.3));
+       console.log(Math.floor(1.9));
+       console.log(Math.ceil(1.9));
+       console.log(Math.ceil(1.1));
+       console.log(Math.round(1.4));
+       console.log(Math.round(1.5));
+       console.log(Math.round(-1.5));
+       console.log(Math.round(-1.4));
+       console.log(Math.random()); */
+
+      /* function getrandom(min, max) {
+         return Math.floor(Math.random() * (max - min + 1) + min);
+       }
+       console.log(getrandom(1, 10));
+       let arr = ["李云龙", "楚云飞", "诸葛亮", "坂田"];
+       console.log(arr[getrandom(0, 4)]); */
+
+      /* function getRandom(min, max) {
+         return Math.floor(Math.random() * (max - min + 1) + min);
+       }
+       for (i = 10; i > 0; i--) {
+         while (i != 0) {
+           alert("欢迎使用赛博赌博器:\n您只有" + i + "次机会.");
+           let quest = getRandom(1, 6);
+           let caice = prompt(
+             "🎲骰子游戏:随机出现一面，请猜测它对应面的点数是几。",
+           );
+           if (caice > quest) {
+             alert("你猜的点数太大了，菜就多练！");
+             break;
+           } else if (caice < quest) {
+             alert("猜的这么小？菜就多练！");
+             break;
+           } else {
+             alert("恭喜你答对了！");
+             break;
+           }
+         }
+       }
+       alert("十次都猜不出来？菜就多练！");
+
+       /* let date = new Date();
+       console.log(date);
+       let date1 = new Date(2019, 0, 1);
+       console.log(date1);
+       let date2 = new Date("2019-10-7 8:8:8");
+       console.log(date2);
+       console.log(date.getFullYear());
+       console.log(date.getMonth() + 1);
+       console.log(date.getDate());
+       console.log(date.getDay());
+
+       let year = date.getFullYear();
+       let month = date.getMonth() + 1;
+       let day = date.getDate();
+       let week = date.getDay();
+       var weekarr = [
+         "星期日",
+         "星期一",
+         "星期二",
+         "星期三",
+         "星期四",
+         "星期五",
+         "星期六",
+       ];
+
+       console.log(
+         "今天是:" + year + "年" + month + "月" + day + "日" + weekarr[week],
+       );
+       function hours() {
+         let hour = date.getHours();
+         let minu = date.getMinutes();
+         minu = minu < 10 ? "0" + minu : minu;
+         let sec = date.getSeconds();
+
+         return hour + ":" + minu + ":" + sec;
+       }
+       console.log(hours());
+       console.log(Date.now()); */
+      /* console.log(+new Date());
+
+       function conutDown(time) {
+         let nowT = +new Date();
+         let futT = +new Date(time);
+         let cd = futT - nowT;
+         if (cd <= 0) return "时间已到！";
+         let sec = cd / 1000;
+         let s = parseInt(sec % 60);
+         s = s < 10 ? "0" + s : s;
+         let m = parseInt((sec / 60) % 60);
+         m = m < 10 ? "0" + m : m;
+         let h = parseInt((sec / 3600) % 24);
+         h = h < 10 ? "0" + h : h;
+         let d = parseInt(sec / 3600 / 24);
+         d = d < 10 ? "0" + d : d;
+         return d + "天" + h + "时" + m + "分" + s + "秒";
+       }
+
+       console.log(conutDown("2025-5-29 22:00:00"));
+       let date = new Date();
+       console.log(date); */
+
+      /* let arr = [];
+       let obj = {};
+
+       console.log(arr instanceof Array);
+       console.log(obj instanceof Array); */
+
+      /* let arr = [1, 2, 4, 9];
+
+       arr.push("我是屁股");
+       arr.unshift("我是脑袋");
+
+       console.log(arr);
+
+       arr.pop();
+
+       console.log(arr);
+
+       arr.shift();
+
+       console.log(arr);
+
+       let arr1 = [];
+       for (i = 0; i < arr.length; i++) {
+         if (arr[i] < 4) {
+           arr1.push(arr[i]);
+         }
+       }
+       console.log(arr1);
+
+       let arr2 = [];
+
+       for (i = arr.length - 1; i >= 0; i--) {
+         arr2.push(arr[i]);
+       }
+       console.log(arr2);
+
+       console.log(arr2.reverse());
+
+       let arr3 = [6, 3, 7, 9, 22, 1];
+       console.log(
+         arr3.sort(function (a, b) {
+           return a - b;
+         }),
+       );
+       console.log(
+         arr3.sort(function (a, b) {
+           return b - a;
+         }),
+       ); */
+
+      /* let arr = [];
+       n = 10;
+       arr.length = n;
+       console.log(arr); */
+
+      /* let arr = [1, 3, 2, 1, 2, 3];
+       let arr2 = [];
+
+       for (i = 0; i < arr.length; i++) {
+         if (arr2.indexOf(arr[i]) == -1) {
+           arr2.push(arr[i]);
+         }
+       }
+       console.log(arr2);
+       console.log(arr2.concat(arr));
+       console.log(arr);
+       console.log(arr.slice(1, 5));
+       console.log(arr.splice(2, 2)); */
+
+      /* let src = "我爱我家，你爱我吗？";
+      let arr = ["我", "爱", "我", "家", ",", "你", "爱", "我", "吗"];
+      let index1 = arr.indexOf("爱");
+      let index = src.indexOf("我");
+      let num = 0;
+
+      console.log(src.replace("我", "你"));
+      console.log(src.replaceAll("我", "你"));
+
+      /*while (index1 !== -1) {
+        console.log(index1);
+        num++;
+        index1 = arr.indexOf("爱", index1 + 1);
+      }
+      console.log("爱出现的次数是:" + num + "次。");
+
+      let o = {};
+      for (i = 0; i < src.length; i++) {
+        let chars = src.charAt(i);
+        if (o[chars]) {
+          o[chars]++;
+        } else {
+          o[chars] = 1;
+        }
+      }
+      console.log(o);
+
+      let max = 0;
+      let ch = "";
+      for (var k in o) {
+        if (o[k] > max) {
+          max = o[k];
+          ch = k;
+        }
+      }
+      console.log(max);
+      console.log("最多次的字符是:" + ch);
+
+      /* console.log(src.charAt(1));
+      console.log(src.charCodeAt(1));
+
+      /* while (index !== -1) {
+         console.log(index);
+         num++;
+         index = src.indexOf("我", index + 1);
+       }
+       console.log("我出现的次数是:" + num); */
+
+      let str = "我真的是累死啦";
+
+      console.log(str.split(""));
+
+      let str1 = "I, dont want study!!";
+
+      console.log(str1.toUpperCase());
+
+      str1 = str1.toUpperCase();
+
+      console.log(str1.toLowerCase());
+    </script>
+  </body>
+</html>

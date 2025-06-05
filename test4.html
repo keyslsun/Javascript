@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>轮播图</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <button id="pyy">彭于晏</button>
+    <button id="prev">上一个</button>
+    <img
+      src="https://ts1.tc.mm.bing.net/th/id/R-C.9264763fbc5aefc46aeafdb43964c25b?rik=iY%2brwawzqoyVkQ&riu=http%3a%2f%2fmat1.gtimg.com%2fcd%2fimage%2f2014%2fxyss11%2fh5-p3_person1.png&ehk=1Bw7qhwzYOaZLrV4D29I4UCMubaqpyVJcU%2f6Bgh62kA%3d&risl=&pid=ImgRaw&r=0"
+      alt=""
+    />
+
+    <script>
+      let btn = document.getElementById("pyy");
+      let prev = document.getElementById("prev");
+      let img = document.querySelector("img");
+
+      btn.onclick = function () {
+        img.src =
+          "https://imgs.hbsztv.com/2023/pic/b843acf8a131e761db262c462fa59820.jpg";
+        img.title = "点赞";
+      };
+      prev.onclick = function () {
+        img.src =
+          "https://ts1.tc.mm.bing.net/th/id/R-C.9264763fbc5aefc46aeafdb43964c25b?rik=iY%2brwawzqoyVkQ&riu=http%3a%2f%2fmat1.gtimg.com%2fcd%2fimage%2f2014%2fxyss11%2fh5-p3_person1.png&ehk=1Bw7qhwzYOaZLrV4D29I4UCMubaqpyVJcU%2f6Bgh62kA%3d&risl=&pid=ImgRaw&r=0";
+        img.title = "第一页";
+      };
+    </script>
+  </body>
+</html>

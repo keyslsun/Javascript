@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>计时器</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea rows="10" cols="30">
+​​用户协议​​
+
+欢迎使用本服务！请您仔细阅读以下条款：
+
+​​使用规则​​：用户需遵守法律法规，不得利用本服务从事任何非法活动。
+​​隐私保护​​：我们将依法保护您的个人信息，未经授权不会向第三方披露。
+​​免责声明​​：因不可抗力或用户操作不当导致的损失，本服务不承担责任。
+​​服务变更​​：我们保留随时修改或终止服务的权利，恕不另行通知。
+​​协议生效​​：使用本服务即视为同意本协议内容。如有异议，请立即停止使用。
+本协议最终解释权归服务提供方所有。感谢您的理解与支持！</textarea
+    >
+
+    <button class="btn" disabled>我已阅读协议(60)</button>
+
+    <script>
+      const btn = document.querySelector(".btn");
+      let i = 60;
+      function fn() {
+        i--;
+        btn.innerHTML = `我已阅读协议(${i})`;
+        if (i <= 0) {
+          clearInterval(n);
+          btn.disabled = false;
+          btn.innerHTML = "同意该协议";
+        }
+      }
+      let n = setInterval(fn, 1000);
+
+      function click() {
+        alert("您已接受该协议！");
+        btn.disabled = true;
+      }
+
+      btn.onclick = click;
+
+      /* let m = setInterval(function () {
+        console.log(11);
+      }, 2000); */
+    </script>
+  </body>
+</html>

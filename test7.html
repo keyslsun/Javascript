@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>test</title>
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      .black {
+        width: 200px;
+        height: 200px;
+        border: solid 2px pink;
+        background-color: black;
+      }
+      .red {
+        width: 200px;
+        height: 200px;
+        border: solid 2px pink;
+        background-color: red;
+      }
+
+      .green {
+        width: 200px;
+        height: 200px;
+        border: solid 2px pink;
+        background-color: green;
+      }
+
+      .blue {
+        width: 200px;
+        height: 200px;
+        border: solid 2px pink;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="black"></div>
+
+    <button class="btn_red">红色</button>
+    <button class="btn_green">绿色</button>
+    <button class="btn_blue">蓝色</button>
+
+    <script>
+      let div = document.querySelector("div");
+      let btnR = document.querySelector(".btn_red");
+      let btnG = document.querySelector(".btn_green");
+      let btnB = document.querySelector(".btn_blue");
+
+      function red() {
+        div.classList.toggle("red");
+      }
+      function green() {
+        div.classList.toggle("green");
+      }
+      function blue() {
+        div.classList.toggle("blue");
+      }
+
+      btnR.onclick = red;
+      btnG.onclick = green;
+      btnB.onclick = blue;
+    </script>
+  </body>
+</html>

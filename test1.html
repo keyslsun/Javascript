@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ceshi</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="box">
+      盒子1
+      <div class="box">
+        盒子2
+        <ul id="nav">
+          <li>首页</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      let lis = document.getElementsByTagName("li");
+      console.log(lis);
+      console.log(lis[0]);
+      let firstBox = document.querySelector(".box");
+      let firstBoxs = document.querySelectorAll(".box");
+      console.log(firstBoxs);
+      console.log(firstBox);
+      let id = document.querySelector("#nav");
+      console.log(nav);
+      let li = document.querySelector("li");
+      console.log(li);
+
+      let bodyE = document.body;
+      console.log(bodyE);
+      console.dir(bodyE);
+
+      let htmlE = document.documentElement;
+      console.log(htmlE);
+      console.log(htmlE);
+    </script>
+  </body>
+</html>
